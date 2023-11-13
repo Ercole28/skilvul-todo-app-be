@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.DATE
       }
     }, {
-      timestamps: false
+      timestamps: false,
     });
   },
   async down(queryInterface, Sequelize) {
