@@ -13,7 +13,9 @@ module.exports = {
           email: userLogin.email
         }
       })
-  
+      
+      console.log(userLogin.password, user.password);
+
       if(bcrypt.compareSync(userLogin.password, user.password)){
         const token = jwt.sign({id: user.id, email: user.email}, process.env.JWT_KEY)
     
@@ -28,7 +30,7 @@ module.exports = {
         })
       }
     } catch (error) {
-      res.json(error.message)
+      res.status(505).json(error.message)
     }
   },
   // registerAction: async (req, res) => {
