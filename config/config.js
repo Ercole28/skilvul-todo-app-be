@@ -16,10 +16,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "freedb_bradley",
+    "password": "f!5kVwKGVV9zNbD",
+    "database": "freedb_todoapp_webservice",
+    "host": "sql.freedb.tech",
     "dialect": "mysql"
   }
 };
