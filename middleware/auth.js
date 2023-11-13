@@ -5,14 +5,14 @@ const verifyToken = (req, res, next) => {
   try {
     const header = req.headers.authorization
     if (!header){
-      res.status(400).json({
+      return res.status(400).json({
         message: "Invalid Headers"
       })
     }
   
     const token = header.split(" ")[1]
     if (!token){
-      res.status(400).json({
+      return res.status(400).json({
         message: "There's no Token"
       })
     }
