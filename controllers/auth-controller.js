@@ -31,22 +31,22 @@ module.exports = {
       res.json(error.message)
     }
   },
-  registerAction: async (req, res) => {
-    let data = req.body;
+  // registerAction: async (req, res) => {
+  //   let data = req.body;
 
-    try {
-      const hashPassword = bcrypt.hashSync(data.password, 10);
-      data.password = hashPassword;
+  //   try {
+  //     const hashPassword = bcrypt.hashSync(data.password, 10);
+  //     data.password = hashPassword;
 
-      await User.create(data);
+  //     await User.create(data);
 
-      res.status(201).json({
-        message: "Berhasil menambahkan user",
-      });
-    } catch {
-      res.json({
-        message: "Gagal menambahkan user",
-      });
-    }
-  }
+  //     res.status(201).json({
+  //       message: "Berhasil menambahkan user",
+  //     });
+  //   } catch {
+  //     res.json({
+  //       message: "Gagal menambahkan user",
+  //     });
+  //   }
+  // }
 }

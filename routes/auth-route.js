@@ -4,6 +4,6 @@ const route = express.Router();
 const { loginAction, registerAction } = require("../controllers/auth-controller");
 
 route.post('/login', loginAction);
-route.post('/regis', registerAction);
+// route.post('/regis', registerAction);
 
 module.exports = route
