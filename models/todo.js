@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     completed: DataTypes.STRING
   }, {
     sequelize,
+    timestamps: false,
     modelName: 'Todo',
   });
   return Todo;
