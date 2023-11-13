@@ -14,6 +14,11 @@ module.exports = {
         }
       })
       
+      if(!user){
+        return res.status(404).json({
+          message: "There's no user with that Credential",
+        })
+      }
       console.log(userLogin.password, user.password);
 
       if(bcrypt.compareSync(userLogin.password, user.password)){
